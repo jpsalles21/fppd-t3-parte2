@@ -7,9 +7,9 @@ import (
 )
 
 const (
-	nrSizes  = 6  // número de magnitudes dos valores primos
-	nrPrimos = 10 // número de valores primos para cada magnitude
-	processadores = 6 //número de processadores utilizados 
+	nrSizes       = 6  // número de magnitudes dos valores primos
+	nrPrimos      = 10 // número de valores primos para cada magnitude
+	processadores = 6  //número de processadores utilizados
 )
 
 func main() {
@@ -34,10 +34,12 @@ func main() {
 		fmt.Println(" ")
 
 		resSeq := contaPrimosSeq(todosPrimos[p])
+		fmt.Println(" ")
 		fmt.Println("------ Sequencial:")
 		fmt.Println("Tempo:", resSeq)
 
 		resConc := contaPrimosConc(todosPrimos[p])
+		fmt.Println(" ")
 		fmt.Println("------ Concorrente:")
 		fmt.Println("Tempo:", resConc)
 	}
